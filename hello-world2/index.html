@@ -4,59 +4,405 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ZUO″のBlog</title>
+  <!--favicon.ico-->
+  
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/touch-icon.png">
+  
+  <!--标题-->
+  
+  <title>0</title>
+  <!-- k d t SEO优化-->
+  
+    <meta name="keywords" content=" 技术文章   JavaScript ">
+  
+  <!--description 描述-->
+  
+  <meta name="description" content="函数是一等公民当我们说函数是“一等公民”的时候，我们实际上说的是它们跟其他对象都一样，你可以像对待其他数据结构一样对待它们。纯函数相同的输入产生相同的输出，并且没有副作用，即为纯函数。例如 Array.prototype.slice 是纯函数，而 Array.prototype.splice 不是纯函数。只要函数跟外界环境发生交互，就是有副作用。但并不是说要禁止副作用，函数式的编程哲学是假定副作用是造成不正当行为的主要原因。纯函数的好处：可缓存性 Cacheable可移植性 Portable可测试性 Testable合理性 Reasonable (引用透明)">
+  
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
+  
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  
+  <!--评论引进Valine-->
+  
+    <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+  
+
+  <script>
+  // theme-ad's config script
+  // it can be used in every script
+  
+  window.AD_CONFIG = {
+    leancloud: {"appid":"JWBYFc6i9NYC0PWxMxlcLO7Y-gzGzoHsz","appkey":"Hc7vwb5cPwK1CaPaeXQfdHAx","comment":true,"count":true},
+    welcome: {"enable":true,"interval":"30hexo"},
+    start_time: "2019-02-20",
+    passwords: ["efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec", ],
+    is_post: true,
+    lock: false,
+    author: "左苗苗（zuo miaomiao）",
+    share: {"twitter":true,"facebook":false,"weibo":true,"qq":true,"wechat":true},
+    mathjax: true
+  };
+</script>
+  <!--引入外部js-->
+  <script src="/vendor/sha256.min.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/index.js"></script>
+<script src="/vendor/qrcode.min.js"></script>
+  <!--引入外部css-->
   <link rel="stylesheet" href="/css/style.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '');
+  </script>
+
+
+
+  <script async>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+
+
 </head>
-  <body class="content">
-    <header class="header">
+  <body>
+    <div class="content">
+      <header class="header">
   <div class="blog-title">
-    <a href="/" class="logo">ZUO″のBlog</a>
+    <a href="/" class="logo">ZUO″のBlog</a> | <span class="motto">总结技术与生活</span>
   </div>
   <nav class="navbar">
     <ul class="menu">
-      <!-- <li class="menu-item">
-        <a href="/" class="menu-item-link">Home</a>
-      </li>
-      <li class="menu-item">
-          <a href="/archives" class="menu-item-link">Archive</a>
-      </li> -->
       
         <li class="menu-item">
-          <a href="/" class="menu-iten-link">Home</a>
+          <a href="/" class="menu-item-link">首页</a> 
         </li>
       
         <li class="menu-item">
-          <a href="/archives" class="menu-iten-link">Archives</a>
+          <a href="/archives/" class="menu-item-link">归档</a> 
         </li>
       
         <li class="menu-item">
-          <a href="https://github.com/zuomm" class="menu-iten-link">Github</a>
+          <a href="/tags/" class="menu-item-link">标签</a> 
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/" class="menu-item-link">分类</a> 
+        </li>
+      
+        <li class="menu-item">
+          <a href="/friends/" class="menu-item-link">友链</a> 
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about/" class="menu-item-link">关于</a> 
         </li>
       
     </ul>
   </nav>
-</header>  
-    <main class="main"> 
-      <article class="post">
-  <div class="post-title">
-    <h2 class="title">Hello World</h2>
-  </div>
-    <div class="post-meta">
-    <span class="post-time">2019-02-19</span>
-  </div>
-  <div class="post-content">
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</header>
+<div id="site-process"></div>
+<script type="text/javascript" src="/js/scroll.js"></script>
+  
+      <main class="main"> 
+        <!--
+  文章模板，新建后，首页才能获取page里面的的数据
+  变量 page 表示的是文章的数据，而不是首页的文章数据集合
+  这里是其他导航路由共用文章模板
+-->
 
+  <!--
+  文章模板，新建后，首页才能获取page里面的的数据
+  变量 page 表示的是文章的数据，而不是首页的文章数据集合
+-->
+<article class="post">
+  <div class="post-meta">
+    <span>
+      <i class="fa fa-calendar"></i>2019-02-19
+    </span>
+    
+      <span>
+        | <a href="/categories/技术文章/"><i class="fa fa-bookmark"></i>技术文章</a>
+      </span>
+    
+    
+      <span>
+        | <i class="fa fa-unlock-alt"></i>UNLOCK
+      </span>
+    
   </div>
+  <div class="post-title">
+    <h2 class="title">JavaScript 函数式编程笔记</h2>
+  </div>
+  <!-- <div class="post-meta">
+    <span class="post-time">2019-02-19</span>
+  </div> -->
+  
+  <div class="post-content">
+    <h3 id="柯里化"><a href="#柯里化" class="headerlink" title="柯里化"></a>柯里化</h3>只传递一个参数来调用它，然后返回另一个函数处理剩下的参数，称为柯离化，也叫做局部调用。<br>javascript:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const _ = require(<span class="string">'lodash/fp'</span>)</span><br><span class="line"></span><br><span class="line">const add = _.curry((a, b) =&gt; a + b)</span><br><span class="line"></span><br><span class="line">const add2 = add(2)</span><br><span class="line"></span><br><span class="line">add2(3) // 5</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>通过组合两个或多个函数返回一个新的函数，例如:<br>javascript:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const g = n =&gt; n + 1;</span><br><span class="line">const f = n =&gt; n * 2;</span><br><span class="line"></span><br><span class="line">const fn = compomse(f, g);</span><br><span class="line"></span><br><span class="line">fn(1); // =&gt; f(g(1)) =&gt; 4</span><br></pre></td></tr></table></figure></p>
+<p>在 compomse 中，g 将先于 f 执行，因此创建了一个从右到左的数据流。</p>
+<p><em>结合律：compomse(f, compomse(g, h)) 等同于 compomse(compomse(f, g), h)</em></p>
+<h3 id="pointfree"><a href="#pointfree" class="headerlink" title="pointfree"></a>pointfree</h3><blockquote>
+<p>“Love means never having to say you’re sorry”<br>pointfree 模式是指永远不需要声明数据。</p>
+</blockquote>
+<p>以一个不恰当的代码比喻：</p>
+<p>javascrip:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const hello = name =&gt; console.log(`hello <span class="variable">$&#123;name&#125;</span>`);</span><br><span class="line"></span><br><span class="line">// not pointfree</span><br><span class="line">const sayHello = (name) =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> hello(name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// pointfree</span><br><span class="line">const sayHello = hello</span><br></pre></td></tr></table></figure>
+<p>PS: 个人理解，pointfree 即是指函数仅只是其他函数的组合，并不需要指定外部的数据，函数中也不需要传入外部变量。<br>但这无法绝对避免，例如获取某个时间字符串的时间戳：const timestamp = (date) =&gt; (new Date(date)).getTime()。</p>
+<h3 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h3><p>在函数的组合中需要进行 debug 的话，可以使用 trace 函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const trace = curry((tag, value) =&gt; &#123;</span><br><span class="line">  console.log(tag, value);</span><br><span class="line">  <span class="built_in">return</span> value;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>将 trace 函数插入到 compomse 中即可检查上一个函数返回值是否正确。</p>
+<h3 id="identity"><a href="#identity" class="headerlink" title="identity"></a>identity</h3><p>范畴学中独特的态射，这个函数接受随便什么东西，然后原封不动的吐出来。一个假装自己是普通数据的函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const identity = x =&gt; x;</span><br></pre></td></tr></table></figure></p>
+<p>identity 函数可以一起使用，但是看起来好像是没有卵用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compomse(identity, f) == compomse(f, identity) == f</span><br></pre></td></tr></table></figure>
+<h3 id="类型签名"><a href="#类型签名" class="headerlink" title="类型签名"></a>类型签名</h3><p>接受具体类型，返回具体类型：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// hello::String -&gt; String</span><br><span class="line">const hello = name =&gt; `hello <span class="variable">$&#123;name&#125;</span>`;</span><br></pre></td></tr></table></figure>
+<p>接受任意类型，并返回相同类型：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// identity::a -&gt; a</span><br><span class="line">const identity = n =&gt; n</span><br></pre></td></tr></table></figure></p>
+<p>接受函数参数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// map::(a -&gt; b) -&gt; ![pic](a) -&gt; ![pic](b)</span><br><span class="line">const map = curry((f, xs) =&gt; xs.map(f));</span><br></pre></td></tr></table></figure></p>
+<h3 id="类型约束"><a href="#类型约束" class="headerlink" title="类型约束"></a>类型约束</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// sort::Ord a =&gt; ![pic](a) =&gt; ![pic](a)</span><br><span class="line">const sort = balabala</span><br></pre></td></tr></table></figure>
+<p>胖箭头的左边表明 a 一定是一个 Ord 对象，也就是说 a 必须要实现 Ord 接口（可排序）。</p>
+<p>通过这种方式能够限制函数的作用范围，这种接口声明叫做类型约束。</p>
+<h3 id="functor"><a href="#functor" class="headerlink" title="functor"></a>functor</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const Functor = (x) =&gt; &#123;</span><br><span class="line">  this.__value = x;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Functor.of = x =&gt; new Functor(x);</span><br><span class="line"></span><br><span class="line">Functor.prototype.map = f =&gt; Functor.of(f(this.__value));</span><br></pre></td></tr></table></figure>
+<p>functor 是实现了 map 函数，并遵守某些特点规则的容器类型，具有 mappable 的特点（类似于 Promise 的 thenable）。</p>
+<h3 id="Maybe"><a href="#Maybe" class="headerlink" title="Maybe"></a>Maybe</h3><p>Maybe 是另一种 functor，实际上只是多了空值检查。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const Maybe = (x) =&gt; &#123;</span><br><span class="line">  this.__value = x;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Maybe.of = x =&gt; new Maybe(x);</span><br><span class="line"></span><br><span class="line">Maybe.prototype.isNothing = () =&gt; this.__value === null || this.__value === undefined;</span><br><span class="line"></span><br><span class="line">Maybe.prototype.map = f =&gt; this.isNothing() ? Maybe.of(null) : Maybe.of(f(this.__value));</span><br></pre></td></tr></table></figure>
+<p>Maybe 使得在 map 调用中产生 null 或者 undefined 时不会爆出错误，而是最后返回 Maybe.of(null)。</p>
+<h3 id="Either"><a href="#Either" class="headerlink" title="Either"></a>Either</h3><p>Either 又是另外一种 functor, 不同于正常的 functor, Either 不管怎么 map 都不会改变自己的值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const Either = (x) =&gt; &#123;</span><br><span class="line">  this.__value = x;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Either.of = x =&gt; new Either(x);</span><br><span class="line"></span><br><span class="line">Either.prototype.map = () =&gt; this;</span><br></pre></td></tr></table></figure>
+<p>Either 用于错误处理，当出现错误时我们返回一个 Either.of(error), 它将把错误带到最后，并显示出来。<br>实际上它就是一个错误消息的 functor, 只是指不会被改变。</p>
+<h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>IO 又又是另外一种 functor, 与最普通的 functor 的差别是，IO 的 __value 是一个函数（不过，我们把它当成是数据）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const IO = (f) =&gt; &#123;</span><br><span class="line">  this.unsafaPerfromIO = f;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">IO.of = x =&gt; new IO(() =&gt; x);</span><br><span class="line"></span><br><span class="line">IO.prototype.map = f =&gt; IO.of(compomse(f, this.unsafaPerfromIO));</span><br></pre></td></tr></table></figure>
+<p>IO 把非纯的动作捕获到包裹函数中，延迟执行非纯的动作。并且，假装 IO 的返回指不是包裹函数本身，而是包裹函数执行后的返回值。</p>
+<p>当需要获取 IO 的值的时候，就执行 IO.unsafaPerfromIO()（此时才会执行整个过程 map by map）。</p>
+<h3 id="Monad"><a href="#Monad" class="headerlink" title="Monad"></a>Monad</h3><p>pointed functor 是指实现了 of 方法的 functor</p>
+<p>monad 是可以变扁的 pointed functor</p>
+<p>monad 主要的使用场景是用来解决嵌套的 functor。</p>
+<p>一个 functor，只要它定义了一个 join 方法和 of 方法，并遵守一些定律，那么它就是一个 monad。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const getItem = key =&gt; IO.of(() =&gt; localStorage.getItem(key));</span><br><span class="line"></span><br><span class="line">const <span class="built_in">log</span> = x = IO.of(() =&gt; &#123;</span><br><span class="line">  console.log(x);</span><br><span class="line">  <span class="built_in">return</span> x;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">const printItem = compomse(join, map(<span class="built_in">log</span>), getItem);</span><br><span class="line"></span><br><span class="line">printItem(<span class="string">'xxx'</span>).unsafaPerfromIO();</span><br></pre></td></tr></table></figure>
+<h3 id="chain-函数"><a href="#chain-函数" class="headerlink" title="chain 函数"></a>chain 函数</h3><p>chain 函数是 functor map 之后 join 的抽象行为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const chain = curry((f, m) =&gt; m.map(f).join());</span><br></pre></td></tr></table></figure>
+<p>PS: 其实没有啥用，只是把 compomse(join, map(log), …) 变成了 compomse(chain(log), …)</p>
+<h3 id="Applicative-Functor"><a href="#Applicative-Functor" class="headerlink" title="Applicative Functor"></a>Applicative Functor</h3><p>applicative functor 能够以一种简明扼要的方式把一个 functor 的值应用到另外一个 functor 上。</p>
+<p>applicative functor 是实现了 ap 方法的 pointed functor</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// applicative</span><br><span class="line">Functor.prototype.ap = other =&gt; other.map(this.__value);</span><br><span class="line"></span><br><span class="line">// Functor.of(add(2)).ap(Functor.of(3));</span><br></pre></td></tr></table></figure>
+<p>Functor.of(x).map(f) 等价于 Functor.of(f).ap(Functor.of(x))。</p>
+<h3 id="lift"><a href="#lift" class="headerlink" title="lift"></a>lift</h3><p>以 pointfree 的方式调用 applicative functor。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const liftA2 = curry((f, functor1, functor2) =&gt; functor1.map(f).ap(functor2));</span><br></pre></td></tr></table></figure>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>haskell 中可以使用 &lt;$&gt; 表示 map, &lt;*&gt; 表示 ap。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Functor.of(2).map(add).ap(Functor.of(3));</span><br><span class="line">// map(add, Functor.of(2)).ap(Functor.of(3));</span><br></pre></td></tr></table></figure>
+<p>等同于：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add &lt;$&gt; Functor 2 &lt;*&gt; Functor 3</span><br></pre></td></tr></table></figure>
+<h3 id="定律"><a href="#定律" class="headerlink" title="定律"></a>定律</h3><ul>
+<li>同一：A.of(id).ap(v) == v</li>
+<li>同态：A.of(f).ap(A.of(x)) == A.of(f(x))</li>
+<li>互换：v.ap(A.of(x)) == A.of(f =&gt; f(x)).ap(x)</li>
+<li>组合：A.of(compomse).ap(u).ap(v).ap(w) == u.ap(v.ap(w))</li>
+</ul>
+  </div>
+  <!--开启目录-->
+  <aside class="table-content" id="site-toc">
+  <div class="table-content-title">
+    <i class="fa fa-arrow-right fa-lg" id="site-toc-hide-btn"></i>
+    <span>目录</span>
+  </div>
+  <div class="table-content-main">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#柯里化"><span class="toc-number">1.</span> <span class="toc-text">柯里化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组合"><span class="toc-number">2.</span> <span class="toc-text">组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pointfree"><span class="toc-number">3.</span> <span class="toc-text">pointfree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">4.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#identity"><span class="toc-number">5.</span> <span class="toc-text">identity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型签名"><span class="toc-number">6.</span> <span class="toc-text">类型签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型约束"><span class="toc-number">7.</span> <span class="toc-text">类型约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#functor"><span class="toc-number">8.</span> <span class="toc-text">functor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maybe"><span class="toc-number">9.</span> <span class="toc-text">Maybe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Either"><span class="toc-number">10.</span> <span class="toc-text">Either</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IO"><span class="toc-number">11.</span> <span class="toc-text">IO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monad"><span class="toc-number">12.</span> <span class="toc-text">Monad</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chain-函数"><span class="toc-number">13.</span> <span class="toc-text">chain 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Applicative-Functor"><span class="toc-number">14.</span> <span class="toc-text">Applicative Functor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lift"><span class="toc-number">15.</span> <span class="toc-text">lift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符"><span class="toc-number">16.</span> <span class="toc-text">操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定律"><span class="toc-number">17.</span> <span class="toc-text">定律</span></a></li></ol>
+  </div>
+</aside>
+  
+    <div class="passage-tags">
+     
+      <a href="/tags/JavaScript/"><i class="fa fa-tags"></i>JavaScript</a>
+    
+    </div>
+  
 </article>
-    </main>
+
+      </main>
+      <!--添加评论模块-->
+      
+        <div class="site-comment-contanier">
+  <p id="site-comment-info">
+    <i class="fa fa-spinner fa-spin"></i> 评论加载中
+  </p>
+  <div id="site-comment"></div>
+</div>
+<script type="text/javascript" src="/js/leancloud.js"></script>
+      
+    </div>
+    <div class="site-footer-wrapper">
+  <footer class="site-footer">
+    <div class="site-footer-link">
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">博客推荐</h5>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/" target="_blank">GodBMW</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="http://ruanyifeng.com/" target="_blank">阮一峰的个人网站</a>
+            </span>
+          
+        </div>
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">系列教程</h5>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" target="_blank">webpack4系列教程</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="https://godbmw.com/design-patterns/" target="_blank">设计模式手册</a>
+            </span>
+          
+        </div>
+      
+        <div class="site-footer-col">
+          <h5 class="site-footer-title">找到我</h5>
+          
+            <span class="site-footer-item">
+              <a href="https://www.zhihu.com/people/zuomiaomiao/activities" target="_blank">知乎</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="https://www.cnblogs.com/mmzuo-798/" target="_blank">博客园</a>
+            </span>
+          
+            <span class="site-footer-item">
+              <a href="https://blog.csdn.net/journey0804" target="_blank">CSDN</a>
+            </span>
+          
+        </div>
+      
+    </div>
+    <div class="site-footer-info">
+      <i class="fa fa-clock-o"> 本站已运行<span id="site-time"></span></i>
+    </div>
+    
+      <div class="site-footer-info">
+        <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
+      </div>
+    
+    
+      <div class="site-footer-info">
+          <i class="fa fa-at"> Email: 1542934395@qq.com
+      </i></div>
+    
+    <!-- 页脚版权信息 -->
+    <div class="site-footer-info">
+      <i class="fa fa-copyright"></i> 
+      2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
+      Created by <a href="https:/godbmw.com/" target="_blank">GodBMW</a>.
+      All rights reserved.
+    </div>
+  </footer>
+</div>
+    <div id="site-layer" style="display:none;">
+  <div class="site-layer-content">
+    <div class="site-layer-header">
+      <span class="site-layer-header-title" id="site-layer-title"></span>
+      <i class="fa fa-close" id="site-layer-close"></i>
+    </div>
+    <div class="site-layer-body" id="site-layer-container">
+      <div class="site-layer-input" id="site-layer-search" style="display: none;">
+        <input type="text">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
+        
+          <div>
+            <img src="/images/wechat.png" alt="WeChat">
+            
+              <p>WeChat</p>
+            
+          </div>
+        
+          <div>
+            <img src="/images/alipay.png" alt="AliPay">
+            
+              <p>AliPay</p>
+            
+          </div>
+        
+      </div>
+      <div id="site-layer-welcome" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="bottom-bar">
+  <div class="bottom-bar-left">
+    <a href="/hello-world3/" data-enable="true">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <a href="/hello-world1/" data-enable="true">
+      <i class="fa fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="bottom-bar-right">
+    <a href="javascript:void(0);" data-enable="true" id="site-toc-show-btn">
+      <i class="fa fa-bars"></i>
+    </a>
+    
+      <a href="#site-comment" data-enable="true">
+        <i class="fa fa-commenting"></i>
+      </a>
+    
+    <a href="javascript:void(0);" id="site-toggle-share-btn">
+      <i class="fa fa-share-alt"></i>
+    </a>
+    <a href="javascript:void(0);" id="site-reward">
+      <i class="fa fa-thumbs-up"></i>
+    </a>
+    <a href="javascript:void(0);" id="back-top-btn">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+</div>
+    <div id="share-btn">
+  
+    <a id="share-btn-twitter" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  
+  
+  
+    <a id="share-btn-weibo" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-weibo"></i>
+    </a>
+  
+  
+    <a id="share-btn-qq" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-qq"></i>
+    </a>
+  
+  
+    <a id="share-btn-wechat" href="javascript:void(0);" target="_blank">
+      <i class="fa fa-wechat"></i>
+    </a>
+  
+</div>
   </body>
 </html>
